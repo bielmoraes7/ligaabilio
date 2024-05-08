@@ -1,0 +1,107 @@
+/* Estilos CSS */
+table {
+width: 100%;
+border-collapse: separate; /* Altera o comportamento padrão de colapso das bordas */
+border-spacing: 0; /* Remove o espaçamento padrão entre as bordas */
+}
+
+th, td {
+text-align: left;
+padding: 12px 15px;
+border-bottom: 1px solid #ddd; /* Adiciona uma linha de separação abaixo de cada célula */
+}
+
+th {
+background-color: #4c8a6e;
+color: white;
+border-top: 2px solid #333; /* Adiciona uma borda mais grossa no topo do cabeçalho da tabela */
+}
+
+/* Adiciona bordas verticais para separar as colunas */
+td + td {
+border-left: 1px solid #ddd;
+}
+#paginaInicial {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh; /* Faz com que a div ocupe a altura total da tela */
+}
+
+#paginaInicial img {
+max-width: 100%;
+height: auto;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #e8eff1;
+margin: 0;
+padding: 20px;
+}
+
+h1 {
+color: #333;
+text-align: center;
+margin-bottom: 30px;
+}
+
+.tab {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.tab button {
+background-color: #58a4b0;
+color: white;
+padding: 10px 20px;
+margin: 0 5px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.tab button:hover,
+.tab button.active {
+background-color: #5c6f7b;
+}
+
+.tabcontent {
+display: none; /* Alterado para ocultar inicialmente */
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 0;
+padding: 0;
+background-color: white;
+}
+
+th, td {
+text-align: left;
+padding: 12px 15px;
+}
+
+th {
+background-color: #4c8a6e;
+color: white;
+}
+
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+tr:hover {
+background-color: #dddfe2;
+}
+@media screen and (max-width: 600px) {
+body {
+background-color: lightblue;
+}
+/* Outros estilos para telas menores */
+}
