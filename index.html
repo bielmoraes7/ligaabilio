@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <!-- Conteúdo anterior omitido para brevidade -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classificação do Campeonato</title>
+        <style>
+            /* Estilos CSS */
+            #paginaInicial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz com que a div ocupe a altura total da tela */
+}
+
+#paginaInicial img {
+    max-width: 100%;
+    height: auto;
+}
+            body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #e8eff1;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    h1 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .tab {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .tab button {
+        background-color: #58a4b0;
+        color: white;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .tab button:hover,
+    .tab button.active {
+        background-color: #5c6f7b;
+    }
+    
+    .tabcontent {
+        display: none; /* Alterado para ocultar inicialmente */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+    
+    th, td {
+        text-align: left;
+        padding: 12px 15px;
+    }
+    
+    th {
+        background-color: #4c8a6e;
+        color: white;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    
+    tr:hover {
+        background-color: #dddfe2;
+    }
+    @media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    /* Outros estilos para telas menores */
+}
+
+        </style>
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Geral')">Tabela Geral</button>
+            <button class="tablinks" onclick="openTab(event, 'Artilheiros')">Tabela de Artilheiros</button>
+            <button class="tablinks" onclick="openTab(event, 'Confrontos')">Próximos Confrontos</button>
+        </div>
+    <!-- Imagem de fundo inicial -->
+    <div id="paginaInicial" class="tabcontent">
+        <img src="liga abilio.jpg" alt="Panfleto Liga Abílio" style="width:100%;height:auto;">
+    </div>
+
+    <!-- Abas e conteúdo das tabelas -->
+</head>
+<body>
+    <div id="Geral" class="tabcontent">
+        <h1>Classificação do Campeonato</h1>
+        <!-- Conteúdo da Tabela Geral -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Time</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Time A</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Time B</td>
+                    <td>28</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Artilheiros" class="tabcontent">
+        <h1>Tabela de Artilheiros</h1>
+        <!-- Conteúdo da Tabela de Artilheiros -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome do Jogador</th>
+                    <th>Total de Gols</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jogador 1</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Jogador 2</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Jogador 3</td>
+                    <td>7</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Confrontos" class="tabcontent">
+        <h1>Próximos Confrontos</h1>
+        <!-- Conteúdo dos Próximos Confrontos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Confronto</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Time A vs Time B</td>
+                    <td>01/06/2024</td>
+                </tr>
+                <tr>
+                    <td>Time C vs Time D</td>
+                    <td>02/06/2024</td>
+                </tr>
+                <tr>
+                    <td>Time E vs Time F</td>
+                    <td>03/06/2024</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Código JavaScript para alternar as abas
+        function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+    </script>
+</body>
+</html>
+
+</body>
