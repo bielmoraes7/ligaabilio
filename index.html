@@ -6,9 +6,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Classificação do Campeonato</title>
+        <title>Liga Abílio</title>
         <style>
             /* Estilos CSS */
+            table {
+    width: 100%;
+    border-collapse: separate; /* Altera o comportamento padrão de colapso das bordas */
+    border-spacing: 0; /* Remove o espaçamento padrão entre as bordas */
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha de separação abaixo de cada célula */
+}
+
+th {
+    background-color: #4c8a6e;
+    color: white;
+    border-top: 2px solid #333; /* Adiciona uma borda mais grossa no topo do cabeçalho da tabela */
+}
+
+/* Adiciona bordas verticais para separar as colunas */
+td + td {
+    border-left: 1px solid #ddd;
+}
             #paginaInicial {
     display: flex;
     justify-content: center;
@@ -116,19 +138,31 @@
                 <tr>
                     <th>Posição</th>
                     <th>Time</th>
-                    <th>Pontos</th>
+                    <th>V</th>
+                    <th>E</th>
+                    <th>D</th>
+                    <th>SG</th>
+                    <th>PTS</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Time A</td>
-                    <td>30</td>
+                    <td>Boleiragem</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>12</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Time B</td>
-                    <td>28</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>8</td>
                 </tr>
                 <!-- Adicione mais linhas conforme necessário -->
             </tbody>
@@ -211,3 +245,4 @@
 </html>
 
 </body>
+
