@@ -5,6 +5,34 @@ border-collapse: separate; /* Altera o comportamento padrão de colapso das bord
 border-spacing: 0; /* Remove o espaçamento padrão entre as bordas */
 }
 
+#darkModeToggle {
+    background-color: #58a4b0; /* Cor de fundo do botão */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#darkModeToggle:before {
+    content: "\263E"; /* Ícone de lua para o modo escuro */
+    margin-right: 8px;
+}
+
+body.dark-mode #darkModeToggle:before {
+    content: "\2600"; /* Ícone de sol para o modo claro */
+}
+
+#darkModeToggle:hover {
+    background-color: #5c6f7b;
+}
+
+
 th, td {
 text-align: left;
 padding: 12px 15px;
@@ -104,4 +132,47 @@ body {
 background-color: lightblue;
 }
 /* Outros estilos para telas menores */
+}
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #FFF;
+    /* Outros estilos para o modo escuro */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #333;
+        margin: 0;
+        padding: 20px;
+        }
+        
+        h1 {
+        color: #e8eff1;
+        text-align: center;
+        margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            }
+            
+            th, td {
+            text-align: left;
+            padding: 12px 15px;
+            }
+            
+            th {
+            background-color: #4c8a6e;
+            color: #333;
+            }
+            
+            tr:nth-child(even) {
+            background-color: #333;
+            }
+            
+            tr:hover {
+            background-color: #5b5c5e;
+            }
 }

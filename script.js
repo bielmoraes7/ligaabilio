@@ -12,3 +12,7 @@
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+
