@@ -7,6 +7,7 @@ Este projeto é um site interativo que apresenta tabelas de classificação para
 - **Tabela Geral**: Exibe a classificação dos times no campeonato, incluindo pontos, partidas jogadas, vitórias, empates e derrotas.
 - **Tabela de Artilheiros**: Lista os principais artilheiros do campeonato e o total de gols marcados.
 - **Próximos Confrontos**: Mostra os próximos jogos e as datas em que ocorrerão.
+- **Light/Dark Mode**: Altera a interface para modo claro/escuro.
 
 ## Tecnologias Utilizadas
 
