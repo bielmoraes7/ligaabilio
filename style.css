@@ -1,4 +1,24 @@
 /* Estilos CSS */
+/* Estilos para botões de cadastro e login */
+.btn-auth {
+    background-color: #58a4b0; /* Cor de fundo padrão */
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none; /* Se estiver usando <a> em vez de <button> */
+}
+
+.btn-auth:hover {
+    background-color: #5c6f7b; /* Cor de hover */
+    transform: translateY(-2px); /* Efeito de elevação leve */
+}
 body {
     transition: background-color 0.3s, color 0.3s;
 }
@@ -200,4 +220,14 @@ body.dark-mode {
             tr:hover {
             background-color: #5b5c5e;
             }
+            /* Estilos para o modo escuro */
+body.dark-mode .btn-auth {
+    background-color: #333;
+    color: #FFF;
+}
+
+/* Estilos para ícones dentro dos botões, se necessário */
+.btn-auth i {
+    margin-right: 8px;
+}
 }
