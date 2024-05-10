@@ -1,21 +1,21 @@
 /* Estilos CSS */
 /* Estilos para dispositivos móveis */
-.scrollable-table {
-    overflow-x: auto; /* Ativa a rolagem horizontal se a tabela for mais larga que o contêiner */
+/* Estilos para a tabela responsiva */
+.responsive-table {
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
 }
 
 @media screen and (max-width: 600px) {
-    table {
-        width: auto; /* Permite que a tabela se expanda além da largura da tela */
-    }
-}
     .responsive-table table {
         width: auto; /* Permite que a tabela se expanda além da largura da tela */
+        min-width: 100%; /* Garante que a tabela ocupe pelo menos a largura total da tela */
     }
-.btn-auth:hover {
-    background-color: #5c6f7b; /* Cor de hover */
-    transform: translateY(-2px); /* Efeito de elevação leve */
+    .responsive-table th,
+    .responsive-table td {
+        white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    }
 }
+
 body {
     transition: background-color 0.3s, color 0.3s;
 }
