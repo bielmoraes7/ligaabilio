@@ -3,6 +3,7 @@
 /* Estilos para a tabela responsiva */
 .responsive-table {
     overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    -webkit-overflow-scrolling: touch; /* Permite rolagem inercial em dispositivos iOS */
 }
 
 @media screen and (max-width: 600px) {
